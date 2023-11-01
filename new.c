@@ -29,24 +29,41 @@ int main() {
     printf("%d   %d   %.2f",min,max,avg);*/
 
     int ar[6]={2,3,4,5,6,7};
-    char condition;
+    int ar2[7];
 
-    do
+    int i;
+    printf("Enter the position: ");
+    scanf("%d",&i);
+    int insert_value;
+    printf("Enter the value: ");
+    scanf("%d",&insert_value);
+
+    for (int j = 0; j < 7; j++)
     {
-        int i,value;
-        printf("Enter location: ");
-        scanf("%d",&i);
-        printf("Enter the value you input: ");
-        scanf("%d",&value);
-        ar[i-1]=value;
-        for ( int j = 0; j < 6; j++)
+        if (j<i-1)
         {
-            printf("%d ",ar[j]);
+            int temp =ar[j];
+            ar2[j]=temp;
+        }else if (j==i-1)
+        {
+            ar2[i-1]=insert_value;
+        }else if(j>=i)
+        {
+            
+            int temp=ar[j-1];
+            ar2[j]=temp;
         }
         
-        printf("\ndo you want to repet it(Y/N): ");
-        scanf(" %c",&condition);
-    } while (condition=='Y'||condition=='y');
+        
+    }
+    for (int j = 0; j < 7; j++)
+    {
+        printf("%d ",ar2[j]);
+    }
+    
+    
+
+    
     
     return 0;
 }
