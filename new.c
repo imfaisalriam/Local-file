@@ -48,10 +48,5 @@ int main() {
         scanf(" %c",&condition);
     } while (condition=='Y'||condition=='y');
     
-
-    
-
-
-
     return 0;
 }
