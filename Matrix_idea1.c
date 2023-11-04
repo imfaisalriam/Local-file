@@ -1,4 +1,5 @@
 #include<stdio.h>
+#include<string.h>
 int main()
 {
     int matrix[5][5];
@@ -42,12 +43,6 @@ int main()
         printf("\n");
         
     }
-    
-
-
-
-
-
 
     return 0;
 }
