@@ -1,30 +1,30 @@
 #include <stdio.h>
-
-int main() {
-    int arr[] = {12, 11, 13, 5, 6, 7};
-    int n = sizeof(arr) / sizeof(arr[0]);
-
-    printf("Original array: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
-    }
-
-    // Bubble Sort Algorithm
-    //for (int i = 0; i < n - 1; i++) {
-        for (int j = 0; j < n -  - 1; j++) {
-            if (arr[j] > arr[j + 1]) {
-                // Swap arr[j] and arr[j+1]
-                int temp = arr[j];
-                arr[j] = arr[j + 1];
-                arr[j + 1] = temp;
+#include<string.h>
+int main()
+{
+    char math[100];
+    scanf("%99s", math);
+    int len =strlen(math);
+    //printf("%d",len);
+    for (int i = 0; i < len -1; i += 2)
+    {
+        for (int j = 0; j < len-1-i; j += 2)
+        {
+            if (math[j] > math[j+2 ])
+            {
+                int temp = math[j];
+                math[j] = math[j+2 ];
+                math[j +2] = temp;
             }
         }
-   // }
-
-    printf("\nSorted array in increasing order: ");
-    for (int i = 0; i < n; i++) {
-        printf("%d ", arr[i]);
     }
+    
+        for (int i = 0; i < len; i++)
+        {
+            printf("%c", math[i]);
+        }
+        
+    
 
     return 0;
 }
