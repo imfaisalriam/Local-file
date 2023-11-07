@@ -13,42 +13,37 @@ int main()
     {
         scanf("%d",&arr[i]);
     }
+    int middle_a=0;
     int num;
     scanf("%d",&num);
-    int middle_ar=(0+7)/2;
+    int start=0,end=7;
+    while (start<=end)
+    {
+        int mid=(start+end)/2;
 
-    if (arr[middle_ar]>num)
-    {
-        for (int i = 0; i < middle_ar; i++)
+        if (arr[mid]==num)
         {
-            if (arr[i]==num);
-            {
-                printf("YES & position: %d",i);
-                break;
-            }
-            
-        }
-        
-    }else if (arr[middle_ar]<num)
-    {
-        for (int i = middle_ar+1; i < 7; i++)
+            printf("YES & position: %d",mid);
+            break;
+        }else if (arr[mid]>num)
         {
-            if (arr[i]==num);
-            {
-                printf("YES & position: %d",i);
-                break;
-            }
-            
+            end=mid-1;
+        }else if(arr[mid]<num)
+        {
+            start=mid+1;
+        }else
+        {
+            printf("NO");
         }
-        
-    }else  if (arr[middle_ar]==num)
-    {
-                printf("YES & position: %d",middle_ar);
-        
-    }else
+         
+    }
+    if (start>end)
     {
         printf("NO");
     }
+    
+    
+    
     
     
 
